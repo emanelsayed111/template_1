@@ -1,0 +1,45 @@
+/* testimonail */
+.testimonail{
+    position: relative;
+    height: 60vh;
+    background-image: url('../images/background/background3.webp');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.testimonail-content{
+    overflow: hidden;
+    padding: 120px 0;
+    width: 80%;
+    margin: auto;
+}
+.testimonail-item{
+    width: 50%;
+    float: left;
+}
+.testimonail-item .testimonail-toplayer{
+    padding: 12px 10px 40px 90px; 
+    position: relative;
+}
+.testimonail-item .testimonail-toplayer img{
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    transition: border-radius 0.5s;
+}
+.testimonail-item .testimonail-toplayer:hover img{
+    border-radius: 50%;
+}
+.testimonail-toplayer-txt{
+    margin: 0 12px 10px;
+    color: var(--whiteColor);
+}
+.testimonail-toplayer-soustxt{
+    color: var(--colorMain);
+    margin: 0 12px 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.testimonail-desc{
+    color: rgb(233, 225, 225);
+    line-height: 1.5;
+}

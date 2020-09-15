@@ -1,0 +1,127 @@
+/* 
+    1- common styles
+    2- general Css
+    3- sections
+      3.1 HOME
+      3.2 ABOUT
+      3.3 PORTFOLIO
+      3.4 SERVICES 
+      3.5 PRICES 
+      3.6 TEAM 
+      3.7 BLOG PAGE
+      3.8 CONTACT
+*/
+/* Common */
+/* 
+    - container 
+    - overlay
+    - opacity hover
+    - section header
+    - section padding
+    - hover effect 1 (left to right) 
+    - hover effect 2 (top to bottom)
+    - 
+*/
+/* GENERAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* css 3*/
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+:root{
+    --colorMain: #6195ff;
+    --grayColor: #999;
+    --bg-gray: #f9f9f9;
+    --whiteColor: #fff;
+}
+ul{
+    list-style: none;
+}
+.hover-opacity:hover{
+    opacity: 0.7;
+}
+.ltr-effect, .tb-effect, .topbtm-effect{
+    position: relative;
+}
+.ltr-effect::after, .tb-effect::after, .topbtm-effect::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: -1;
+}
+.topbtm-effect::after{
+    height: 0%;
+    transition: height 0.5s, width 0.5s;
+}
+.topbtm-effect:hover::after{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+}
+.ltr-effect::after{
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    transition: width 0.5s;
+}
+.ltr-effect:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.tb-effect::after{
+    height: 0%;
+    width: 0%;
+    transition: height 0.5s, width 0.5s;
+}
+.tb-effect:hover::after{
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: montserrat, sans-serif;
+}
+.clear{
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
+.pd-y{
+    padding: 120px 0;
+}
+.section-header{
+    text-align: center;
+}
+.section-header .section-title{
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.section-header .line{
+    display: block;
+    width: 70px;
+    height: 2px;
+    margin: auto;
+    background-color: var(--colorMain);
+    margin: 0 auto 70px auto;
+}

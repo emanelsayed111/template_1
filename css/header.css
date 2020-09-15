@@ -1,0 +1,72 @@
+/* HEADER */
+
+.header{
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.header .logo{
+    width: 40%;
+    float: left;
+}
+.header .logo img{
+    width: 25%;
+}
+.header .nav{
+    width: 60%;
+    float: left;
+    list-style: none;
+}
+.header .nav > li{
+    display: inline-block;
+    text-align: center;
+}
+.header .nav > li > a{
+    text-decoration: none;
+    color: var(--whiteColor);
+    display: block;
+    padding: 20px 20px;
+}
+.header .nav > li > a.active:after,
+.header .nav > li > a::after{
+    margin-top: 3px;
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: var(--colorMain);
+    transition: 0.3s;
+}
+.header .nav > li > a.active:after{
+    width: 100%;
+}
+.header .nav > li > a::after{
+    width: 0;
+}
+.header .nav > li > a:hover::after{
+    width: 100%;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{ 
+    position: absolute;
+    background-color: var(--colorMain);
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s
+}
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-menu a{
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color: var(--whiteColor);
+}

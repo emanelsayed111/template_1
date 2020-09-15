@@ -1,0 +1,42 @@
+/* OFFER */
+.offer-content{
+    overflow: hidden;
+}
+.offer-content .offer-item{
+    width: 30%;
+    float: left;
+}
+.offer-item{
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e8;
+    padding: 30px 15px 30px 70px;
+    position: relative;
+}
+.offer-item.mg{
+    margin: 0 5%;
+}
+.offer-item .icon{
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    font-size: 30px;
+    color: var(--colorMain);
+}
+.offer-item-title{
+    text-transform: capitalize;
+    margin-bottom: 12px;
+    transition: color 0.5s;
+}
+.offer-item:hover .offer-item-title{
+    color: var(--whiteColor);
+}
+.offer-item-desc{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--grayColor);
+}
+.offer-item.ltr-effect::after{
+    border-radius: 0px;
+    background-color: rgba(37, 6, 122, 0.15);
+}

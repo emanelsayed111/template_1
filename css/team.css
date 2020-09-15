@@ -1,0 +1,96 @@
+/* TEAM */
+.team-content{
+    overflow: hidden;
+}
+.team-item .team-img{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.team-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+.team-overlay a{
+    border-radius: 50%;
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-color: #3968c5;
+    color: var(--whiteColor);
+    margin: 2px;
+    margin-left: auto;
+}
+.team-overlay a i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+}
+.team-item:hover .team-overlay{
+    opacity: 1;
+    visibility: visible;
+}
+.team-img img{
+    transition: 0.5s;
+    width: 100%;
+}
+.team-item:hover .team-img img{
+    border-radius: 12%;
+    transition: 0.5s;
+}
+.team-item{
+    width: 30%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px 15px;
+    text-align: center;
+}
+.team-item .team-info-title{
+    color: #222;
+    margin: 12px 0;
+    transition: color 0.5s;
+}
+.team-item .team-info-text{
+    color: var(--grayColor);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+.team-item.topbtm-effect{
+    z-index: 1;
+}
+.team-item:hover .team-info-title{
+    color: var(--whiteColor);
+}
+.team-item:hover .team-info-text{
+    color: #3968c5;
+}
+.team-item.mg{
+    margin: 0 5%;
+}
+.team-item .team-overlay a{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+.team-item:hover .team-overlay .icon2{
+    transition-delay: 0.2s;
+}
+.team-item:hover .team-overlay .icon3{
+    transition-delay: 0.5s;
+}
+.team-item:hover .team-overlay .icon1,
+.team-item:hover .team-overlay .icon2,
+.team-item:hover .team-overlay .icon3
+{
+    visibility: visible;
+    opacity: 1;
+}
